@@ -1,1 +1,1 @@
-web: java -Dgrails.env=prod -Dserver.port=${PORT:-8080} -Dserver.host=0.0.0.0 ${JAVA_OPTS} -jar grestapp*.jar
+web: cd build/libs ; java $JAVA_OPTS -Dgrails.env=prod -jar ../../server/webapp-runner-*.jar --port $PORT *.war
